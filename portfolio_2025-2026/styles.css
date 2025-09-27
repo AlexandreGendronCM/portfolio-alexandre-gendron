@@ -1,0 +1,53 @@
+#page_accueil{
+display: grid;
+row-gap: 10px;
+column-gap: 10px;
+flex: 1 0 0;
+align-self: stretch;
+grid-template-rows: repeat(6, minmax(0, 1fr));
+grid-template-columns: repeat(12, minmax(0, 1fr));
+height: 100vh;
+width: 100vw;
+}
+
+#nametag{
+background: #ffffff;
+grid-column-start:6; 
+grid-column-end: 8;
+grid-row-start:5; 
+grid-row-end: 6;
+padding: 8px;
+align-self:flex-end; 
+}
+
+#logo_svg{
+grid-column-start:4; 
+grid-column-end: 8;
+grid-row-start:2; 
+grid-row-end: 4;   
+width: fill;
+height: fill;
+align-self:center;
+}
+
+#nav{
+color: black;
+}
+
+
+#menu_btn{
+padding: 5px;
+}
+
+#ul_navbar{
+padding: 8px;
+}
+
+
+body{
+background: #383838;
+background-repeat: no-repeat;
+font-family: "Archivo";
+font-weight:900;
+letter-spacing: -1px;
+}
