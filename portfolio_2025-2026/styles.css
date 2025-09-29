@@ -1,53 +1,82 @@
-#page_accueil{
-display: grid;
-row-gap: 10px;
-column-gap: 10px;
-flex: 1 0 0;
-align-self: stretch;
-grid-template-rows: repeat(6, minmax(0, 1fr));
-grid-template-columns: repeat(12, minmax(0, 1fr));
-height: 100vh;
-width: 100vw;
-}
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: lightblue;
+    }
 
-#nametag{
-background: #ffffff;
-grid-column-start:6; 
-grid-column-end: 8;
-grid-row-start:5; 
-grid-row-end: 6;
-padding: 8px;
-align-self:flex-end; 
-}
+    .nametag{
 
-#logo_svg{
-grid-column-start:4; 
-grid-column-end: 8;
-grid-row-start:2; 
-grid-row-end: 4;   
-width: fill;
-height: fill;
-align-self:center;
-}
+   background-color: burlywood;
 
-#nav{
-color: black;
+    }
 }
 
 
-#menu_btn{
-padding: 5px;
+#page_accueil {
+    display: grid;
+    row-gap: 10px;
+    column-gap: 10px;
+    flex: 1 0 0;
+    align-self: stretch;
+    grid-template-rows: repeat(6, minmax(0, 1fr));
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    height: 100vh;
+    width: 100vw;
 }
 
-#ul_navbar{
-padding: 8px;
+.nametag {
+    background-color: #ffffff;
+    grid-column-start: 6;
+    grid-column-end: 8;
+    grid-row-start: 6;
+    grid-row-end: 7;
+    padding: 1vh;
+    align-self: flex-start;
 }
 
 
-body{
-background: #383838;
-background-repeat: no-repeat;
-font-family: "Archivo";
-font-weight:900;
-letter-spacing: -1px;
+
+.nav a{
+   text-decoration: none; 
+   color: black;
+}
+
+.btnmenu {
+    background-color: #ffffff;
+    align-self: center;
+    padding: 1vh;
+}
+
+.navigation {
+
+    background-color: #ffffff;
+    align-self: center;
+    grid-column: 5/9;
+    padding: 1vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+}
+
+
+.texteaccueil {
+    color: #ffffff;
+    align-self: center;
+    padding: 1vh;
+    grid-column: 4/10;
+    grid-row: 3/3;
+    font-size: 5vw;
+    font-style: italic;
+    letter-spacing: -0.4vw;
+
+}
+
+body {
+    /* background-color: aquamarine; */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: "Archivo";
+    font-weight: 900;
+    letter-spacing: -0.05vh;
+    font-size: 1vw;
 }
