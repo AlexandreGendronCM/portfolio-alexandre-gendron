@@ -1,14 +1,4 @@
-@media only screen and (max-width: 600px) {
-    body {
-        background-color: lightblue;
-    }
 
-    .nametag{
-
-   background-color: burlywood;
-
-    }
-}
 
 
 #page_accueil {
@@ -25,10 +15,8 @@
 
 .nametag {
     background-color: #ffffff;
-    grid-column-start: 6;
-    grid-column-end: 8;
-    grid-row-start: 6;
-    grid-row-end: 7;
+    grid-column: 6/8;
+    grid-row: 6/7;
     padding: 1vh;
     align-self: flex-start;
 }
@@ -71,7 +59,7 @@
 }
 
 body {
-    /* background-color: aquamarine; */
+    background-color: black;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -79,4 +67,19 @@ body {
     font-weight: 900;
     letter-spacing: -0.05vh;
     font-size: 1vw;
+}
+
+
+@media(max-width: 600px) {
+    body {
+        background-color: lightblue;
+    }
+
+    .nametag{
+
+   background-color: burlywood;
+    grid-column: 2/12;
+    grid-row: 6/8;
+
+    }
 }
