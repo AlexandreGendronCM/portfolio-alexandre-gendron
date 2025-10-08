@@ -1,162 +1,80 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
-#page_accueil {
-    height: 100vh;
-    width: 100vw;
-}
-
-#section_projets {
-    background-color: #ffffff;
-
-    width: 100vw;
-}
-
-.nametag {
-
-    position: absolute;
-    left: 50%;
-    top: 85%;
-    transform: translateX(-50%);
-    background-color: #ffffff;
-    padding: 1vh;
-
-}
-
-
-
-a {
-    text-decoration: none;
-    color: black;
-    transition: color 0.5s ease-in-out, font-style 0.5s ease-in-out;
-
-}
-
-a:hover {
-
-    font-style: italic;
-    color: rgb(0, 119, 255);
-
-
-}
-
-.btnmenu {
-    background-color: #ffffff;
-    align-self: center;
-    padding: 1vh;
-
-}
-
-.navigation {
-
-    background-color: #ffffff;
-    align-self: center;
-    padding: 1vh;
-    display: flex;
-    justify-content: space-evenly;
-
-}
-
-
-.texteaccueil {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    color: #ffffff;
-    padding: 1vh;
-    font-size: 5vw;
-    font-style: italic;
-    letter-spacing: -0.4vw;
-
-}
-
 body {
-    background-color: black;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    font-family: "Instrument Serif";
+    background-color: #1E1E1E;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 0.3fr 1fr 1fr;
+    padding: 0 12px 0 12px;
+}
+
+.titre_header {
+    justify-self: start;
+    align-self: end;
+    transform: translateY(10px);
+    color: white;
+    font-size: 5rem;
+
+}
+
+.nom_header {
+    justify-self: start;
+    align-self: end;
+    color: #B783A9;
     font-family: "Archivo";
-    font-weight: 900;
-    letter-spacing: -0.05vh;
-    font-size: clamp(12px, 1vw, 1vw);
+    letter-spacing: -0.15rem;
+    font-size: 2rem;
 }
 
-.active {
-
-    text-decoration: underline;
-
+.annee_header {
+    justify-self: end;
+    align-self: end;
+    color: #B783A9;
+    font-family: "Archivo";
+    letter-spacing: -0.15rem;
+    font-size: 2rem;
 }
 
-#barre_projets {
-    display: flex;
-    justify-content: center;
-    font-size: 3em;
+.hero {
+    height: 100vh;
+    background-image: url(../medias/img/Frame\ 17.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.projet {
-    display: block;
-    justify-content: center;
-    align-items: end;
-    height: 50vh;
-    width: 25vw;
-    transition: 0.1s ease-in-out;
-    margin-bottom: 7em;
+.bande_projets {
+    margin: 10rem 0 10rem 0;
+    font-size: 5rem;
+    color: white;
 }
 
-.projet_img{
-
-    background-image: url(https://imgs.search.brave.com/bAe33gK7hxL0OZcq_zxS9KGCvt01Yn-4XKKJx466FVM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAyMy8x/MC8wNS8wMS8wMC9m/YXJtZXItODI5NDcx/Nl82NDAuanBn);
-height: 100%;
-width: 100%;
+.container_projet {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 10rem 1fr;
+    height: 85vh;
+    margin-bottom: 7rem;
 }
 
-.container {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    flex-wrap: wrap;
-
+.image_projet {
+    grid-row: span 2;
+    background-image: url(../medias/img/image\ 11.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.bascarte {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #ffffff;
-    width: 100%;
-    height: 15%;
-    transition: 0.1s ease-in-out;
-
+.titre_projet {
+    font-size: 5rem;
+    color: white;
+    justify-self: center;
+    align-self: center;
 }
 
-.projet:hover {
-
-    transform: scale(102%);
-
-}
-
-
-
-@media screen and (max-width: 1000px) {
-
-    .container {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        width: 100%;
-        flex-wrap: wrap;
-
-    }
-
-    .projet {
-        width: 50vw;
-    }
-
-
+.texte_projet {
+    padding: 12px;
+    font-family: "Archivo";
+    color: #B783A9;
+    font-size: 1.5rem;
+    align-self: center;
 }
