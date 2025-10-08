@@ -43,7 +43,7 @@ body {
     background-size: cover;
 }
 
-.bande_projets {
+.bande{
     margin: 10rem 0 10rem 0;
     font-size: 5rem;
     color: white;
@@ -64,11 +64,32 @@ body {
     background-size: cover;
 }
 
+.container_titre_projet{
+
+border-top: #B783A9 solid 1px;
+justify-self: center;
+align-self: center;
+align-content: center;
+width: 100%;
+height: 100%;
+
+}
 .titre_projet {
     font-size: 5rem;
     color: white;
     justify-self: center;
+    
+}
+
+.container_texte_projet{
+
+    border-bottom: #B783A9 solid 1px;
+    justify-self: center;
     align-self: center;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+
 }
 
 .texte_projet {
@@ -77,4 +98,76 @@ body {
     color: #B783A9;
     font-size: 1.5rem;
     align-self: center;
+}
+
+.container_apropos_contact{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 10rem 1fr;
+    height: 50vh;
+    margin-bottom: 7rem;
+}
+
+.titre_contact{
+    font-size: 5rem;
+    color: white;
+    justify-self: center;
+}
+
+.titre_apropos{
+    font-size: 5rem;
+    color: white;
+    justify-self: center;
+}
+
+.texte_contact{
+    padding: 12px;
+    font-family: "Archivo";
+    color: #B783A9;
+    font-size: 1.5rem;
+    align-self: center;
+    text-align: center;
+    list-style: none;
+    
+}
+
+.texte_apropos{
+    padding: 12px;
+    font-family: "Archivo";
+    color: #B783A9;
+    font-size: 1.5rem;
+    align-self: center;
+    text-align: center;
+}
+
+.mot_highlight{
+
+    display: inline;
+    font-family: "Instrument Serif";
+    color: #A7FF65;
+    letter-spacing: 0.06rem;
+}
+
+
+.container_bande_competence{
+justify-content: start;
+border-top: #B783A9 solid 1px;
+border-bottom: #B783A9 solid 1px;
+
+
+}
+
+.bande_competence{
+
+    font-size: 5rem;
+    color:#B783A9;
+}
+
+.footer{
+    font-family: "Archivo";
+    font-size: 1.5rem
+    rem;
+    color:#B783A9;
+    text-align: center;
+    padding-top: 7rem;
 }
