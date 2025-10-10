@@ -148,7 +148,7 @@ body {
 }
 
 .texte_apropos{
-    padding: 12px;
+    padding: 24px;
     font-family: "Archivo";
     color: #B783A9;
     font-size: 1.5rem;
@@ -161,7 +161,7 @@ body {
     display: inline;
     font-family: "Instrument Serif";
     color: #A7FF65;
-    letter-spacing: 0.06rem;
+    letter-spacing: 0.05rem;
 }
 
 

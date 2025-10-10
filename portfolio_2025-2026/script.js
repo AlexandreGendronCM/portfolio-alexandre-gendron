@@ -14,3 +14,5 @@ console.log(bandeCompetencesTxtWidth*2);
 gsap.fromTo("#bande_competences",{x:0},{x:-(bandeCompetencesTxtWidth*2), duration: ((bandeCompetencesTxtWidth*2)/143), ease: "none", repeat: -1});
 
 
+
+
