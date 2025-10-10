@@ -1,6 +1,7 @@
 body {
     font-family: "Instrument Serif";
     background-color: #1E1E1E;
+    overflow-x: hidden ;
 }
 
 .header {
@@ -44,17 +45,31 @@ body {
 }
 
 .bande{
+    /* white-space: nowrap; */
     margin: 10rem 0 10rem 0;
     font-size: 5rem;
     color: white;
 }
+
+.conainer_bande{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.bande_wrapper{
+    display: flex;
+}
+
+
 
 .container_projet {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 10rem 1fr;
     height: 85vh;
-    margin-bottom: 7rem;
+    /* margin-bottom: 7rem; */
+    
 }
 
 .image_projet {
@@ -66,12 +81,12 @@ body {
 
 .container_titre_projet{
 
-border-top: #B783A9 solid 1px;
-justify-self: center;
-align-self: center;
-align-content: center;
-width: 100%;
-height: 100%;
+    border-top: #B783A9 solid 1px;
+    justify-self: center;
+    align-self: center;
+    align-content: center;
+    width: 100%;
+    height: 100%;
 
 }
 .titre_projet {
@@ -87,6 +102,7 @@ height: 100%;
     justify-self: center;
     align-self: center;
     align-content: center;
+    padding: 1rem;
     width: 100%;
     height: 100%;
 
@@ -105,7 +121,7 @@ height: 100%;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 10rem 1fr;
     height: 50vh;
-    margin-bottom: 7rem;
+    /* margin-bottom: 7rem; */
 }
 
 .titre_contact{
@@ -149,7 +165,7 @@ height: 100%;
 }
 
 
-.container_bande_competence{
+.container_competence{
 justify-content: start;
 border-top: #B783A9 solid 1px;
 border-bottom: #B783A9 solid 1px;
@@ -157,7 +173,7 @@ border-bottom: #B783A9 solid 1px;
 
 }
 
-.bande_competence{
+.competence{
 
     font-size: 5rem;
     color:#B783A9;
@@ -165,9 +181,11 @@ border-bottom: #B783A9 solid 1px;
 
 .footer{
     font-family: "Archivo";
-    font-size: 1.5rem
+    font-size: 1rem
     rem;
     color:#B783A9;
     text-align: center;
     padding-top: 7rem;
 }
+
+
