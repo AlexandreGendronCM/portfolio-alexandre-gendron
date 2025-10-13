@@ -99,6 +99,7 @@ body {
 .container_texte_projet{
 
     border-bottom: #B783A9 solid 1px;
+    text-align: center;
     justify-self: center;
     align-self: center;
     align-content: center;
@@ -188,4 +189,25 @@ border-bottom: #B783A9 solid 1px;
     padding-top: 7rem;
 }
 
+.affAlt > .container_titre_projet{
 
+order: 0;
+
+
+}
+
+.affAlt > .image_projet{
+
+
+order: 1;
+
+
+}
+
+.affAlt > .container_texte_projet{
+
+
+order: 2;
+
+
+}

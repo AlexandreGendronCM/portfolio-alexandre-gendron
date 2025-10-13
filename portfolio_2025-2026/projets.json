@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "title": "Métrage",
+    "category": "Web",
+    "sneakpeek": "Métrage est un site de critiques consacré à la cinématographie sous toutes ses formes : films, séries et courts métrages. Il a été créé par trois amis passionnés : Rafael Angon Dubé, Mikael Arseneau et Alexandre Gendron.",
+    "images": ["./chemin/vers/votre/img.jpg"]
+
+    
+  },
+  {
+    "id": 2,
+    "title": "Fhyre Records",
+    "category": "Web",
+    "sneakpeek": "Fhyre Records est un site web vitrine dédié à la musique. Ce site, avait pour but de développer nos compétences avec les animations css",
+    "images": ["./chemin/vers/votre/img2-1.jpg"]
+  
+  },
+  {
+    "id": 3,
+    "title": "Introspecrion",
+    "category": "Audiovisuel",
+    "sneakpeek": "Ce projet avait pour but de réaliser un projet sonore interactif. Développer une proposition artistique. Planifier, organiser et configurer votre travail de création interactive. Créer des sonorités à l’aide de modulateurs et de synthétiseurs contrôlés par un clavier midi. Élaborer une programmation permettant de déclencher des séquences sonores et de générer des variantes expressives de façon interactive à l'aide de dispositifs interactifs (clavier de l'ordinateur, contrôleur midi et microphone). Enregistrer et exporter le fruit d'une expérience d'interaction en temps réel.",
+    "images": ["./chemin/vers/votre/img.jpg"]
+
+  },
+  {
+    "id": 4,
+    "title": "Chasseur de crânes",
+    "category": "Unity",
+    "sneakpeek": "Projet de unity jeux vr wow trop fort :) ",
+    "images": ["./chemin/vers/votre/img2-1.jpg"]
+    
+  }
+]
+
+
