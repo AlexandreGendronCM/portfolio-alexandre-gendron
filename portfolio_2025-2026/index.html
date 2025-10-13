@@ -52,11 +52,16 @@
 
 
 
-      <div class="container_projet" :class="{affAlt : projet.id % 2 > 0}">
-        <div class="image_projet"></div>
-        <div class="container_titre_projet">
+      <div class="container_projet" :class="{affAlt : projet.id % 2 == 0}">
+
+<div class="container_titre_projet">
           <h2 class="titre_projet" id="titre_1">{{projet.title}}</h2>
         </div>
+
+        <div class="image_projet"></div>
+
+        
+
         <div class="container_texte_projet">
           <p class="texte_projet">{{projet.sneakpeek}} </p>
         </div>
@@ -80,11 +85,7 @@
   <section class="container_apropos_contact">
     <h2 class="titre_apropos">*À PROPOS*</h2>
     <h2 class="titre_contact">*CONTACT*</h2>
-    <div class="texte_apropos">Je suis bla bla bla étudiant bla bla bla <p class="mot_highlight">multimédia</p> stage
-      svp merci .. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.
-      Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in
-      hendrerit urna. Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa
-      mi. Aliquam in hendrerit urna. Lorem ipsum dolor sit amet</div>
+    <div class="texte_apropos">Je suis un finissant en <p class="mot_highlight">techniques d'intégration multimédia</p>. Je cherche  </div>
     <ul class="texte_contact">
       <li>alexandregendron2004@gmail.com</li>
       <li>438-778-5122</li>

@@ -20,7 +20,7 @@
     "id": 3,
     "title": "Introspecrion",
     "category": "Audiovisuel",
-    "sneakpeek": "Ce projet avait pour but de réaliser un projet sonore interactif. Développer une proposition artistique. Planifier, organiser et configurer votre travail de création interactive. Créer des sonorités à l’aide de modulateurs et de synthétiseurs contrôlés par un clavier midi. Élaborer une programmation permettant de déclencher des séquences sonores et de générer des variantes expressives de façon interactive à l'aide de dispositifs interactifs (clavier de l'ordinateur, contrôleur midi et microphone). Enregistrer et exporter le fruit d'une expérience d'interaction en temps réel.",
+    "sneakpeek": "Ce projet avait pour but de réaliser un projet sonore interactif.",
     "images": ["./chemin/vers/votre/img.jpg"]
 
   },
