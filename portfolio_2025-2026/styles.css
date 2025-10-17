@@ -1,3 +1,9 @@
+html{
+
+overflow-x: hidden;
+
+}
+
 body {
     font-family: "Instrument Serif";
     background-color: #1E1E1E;
@@ -72,9 +78,7 @@ body {
 
 .image_projet {
     grid-row: span 2;
-    background-image: url(../medias/img/image\ 11.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+ overflow: hidden;
 }
 
 .container_titre_projet{
@@ -180,8 +184,7 @@ border-bottom: #B783A9 solid 1px;
 
 .footer{
     font-family: "Archivo";
-    font-size: 1rem
-    rem;
+    font-size: 1rem;
     color:#B783A9;
     text-align: center;
     padding-top: 7rem;

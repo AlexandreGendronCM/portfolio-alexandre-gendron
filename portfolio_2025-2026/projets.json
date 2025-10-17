@@ -4,7 +4,8 @@
     "title": "Métrage",
     "category": "Web",
     "sneakpeek": "Métrage est un site de critiques consacré à la cinématographie sous toutes ses formes : films, séries et courts métrages. Il a été créé par trois amis passionnés : Rafael Angon Dubé, Mikael Arseneau et Alexandre Gendron.",
-    "images": ["./chemin/vers/votre/img.jpg"]
+    "images":  "../medias/img/Frame 41.png",
+    "lien": "./metrage.html"
 
     
   },
@@ -13,7 +14,7 @@
     "title": "Fhyre Records",
     "category": "Web",
     "sneakpeek": "Fhyre Records est un site web vitrine dédié à la musique. Ce site, avait pour but de développer nos compétences avec les animations css",
-    "images": ["./chemin/vers/votre/img2-1.jpg"]
+    "images":  "../medias/img/Frame 41.png"
   
   },
   {
@@ -21,7 +22,7 @@
     "title": "Introspecrion",
     "category": "Audiovisuel",
     "sneakpeek": "Ce projet avait pour but de réaliser un projet sonore interactif.",
-    "images": ["./chemin/vers/votre/img.jpg"]
+    "images":  "../medias/img/Frame 41.png"
 
   },
   {
@@ -29,7 +30,7 @@
     "title": "Chasseur de crânes",
     "category": "Unity",
     "sneakpeek": "Projet de unity jeux vr wow trop fort :) ",
-    "images": ["./chemin/vers/votre/img2-1.jpg"]
+    "images":  "../medias/img/Frame 41.png"
     
   }
 ]

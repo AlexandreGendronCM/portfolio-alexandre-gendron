@@ -14,11 +14,36 @@ console.log(bandeCompetencesTxtWidth * 2);
 gsap.fromTo("#bande_competences", { x: 0 }, { x: -(bandeCompetencesTxtWidth * 2), duration: ((bandeCompetencesTxtWidth * 2) / 143), ease: "none", repeat: -1 });
 
 
+
+
+
+
+let competence_1 = document.getElementById("competence_1")
+let competence_1_txt = document.getElementById("competence_1_txt")
+
+let competences = document.querySelectorAll(".container_competence");
+
+competences.forEach(function (competence,index){
+
+const animation = gsap
+    .timeline({ paused: true })
+    .to(competence.querySelector(".competence"), {
+      color: "#1E1E1E"
+    })
+    .to(competence, { backgroundColor: "#B783A9"}, 0);
+
+  competence.addEventListener("mouseenter", () => animation.play());
+  competence.addEventListener("mouseleave", () => animation.reverse());
+
+})
+
+
 const appli = Vue.createApp({
 
     data() {
         return {
             tableau_projets: []
+
         };
     },
     mounted() {
@@ -43,6 +68,9 @@ fetch("./projets.json")
     }
 });
 
+
+
+
 const vm = appli.mount('#section_projets');
 
 
@@ -50,4 +78,8 @@ const vm = appli.mount('#section_projets');
 
 console.log(this.tableau_projets);
 
-app.mount('#section_projet');
+
+
+
+
+

@@ -45,6 +45,7 @@
       <h2 class="bande" id="bande_projet">\*PROJETS*/</h2>
     </div>
   </section>
+  
 
   <section id="section_projets">
 
@@ -58,7 +59,10 @@
           <h2 class="titre_projet" id="titre_1">{{projet.title}}</h2>
         </div>
 
-        <div class="image_projet"></div>
+       <div class="image_projet">
+        <img :src="projet.images">
+       </div>
+
 
         
 
@@ -78,9 +82,11 @@
       <h2 class="bande" id="bande_apropos_contact">\*ÀPROPOS*/\*CONTACT*/</h2>
       <h2 class="bande" id="bande_apropos_contact">\*ÀPROPOS*/\*CONTACT*/</h2>
       <h2 class="bande" id="bande_apropos_contact">\*ÀPROPOS*/\*CONTACT*/</h2>
-      <h2 class="bande" id="bande_apropos_contact">\*ÀPROPOS*/\*CONTACT*/</h2>
     </div>
   </section>
+
+
+
 
   <section class="container_apropos_contact">
     <h2 class="titre_apropos">*À PROPOS*</h2>
@@ -102,43 +108,38 @@
       <h2 class="bande" id="bande_competences">\*COMPÉTENCES*/\*COMPÉTENCES*/</h2>
       <h2 class="bande" id="bande_competences">\*COMPÉTENCES*/\*COMPÉTENCES*/</h2>
       <h2 class="bande" id="bande_competences">\*COMPÉTENCES*/\*COMPÉTENCES*/</h2>
-      <h2 class="bande" id="bande_competences">\*COMPÉTENCES*/\*COMPÉTENCES*/</h2>
-      <h2 class="bande" id="bande_competences">\*COMPÉTENCES*/\*COMPÉTENCES*/</h2>
-      <h2 class="bande" id="bande_competences">\*COMPÉTENCES*/\*COMPÉTENCES*/</h2>
-
-
     </div>
   </section>
 
 
-  <section class="container_competence">
-    <h2 class="competence">
+  <section class="container_competence" id="competence_1">
+    <h2 class="competence" id="competence_1_txt">
       *FIGMA*
     </h2>
   </section>
   <section class="container_competence">
-    <h2 class="competence">
+    <h2 class="competence" id="competence_2">
       *TOUCH DESIGNER*
     </h2>
   </section>
   <section class="container_competence">
-    <h2 class="competence">
+    <h2 class="competence" id="competence_3">
       *HTML / CSS / JAVASCRIPT*
     </h2>
   </section>
   <section class="container_competence">
-    <h2 class="competence">
+    <h2 class="competence" id="competence_4">
       *REAPER*
     </h2>
   </section>
   <section class="container_competence">
-    <h2 class="competence">
+    <h2 class="competence" id="competence_5">
       *MAX 8*
     </h2>
   </section>
   <footer class="container_footer">
     <h3 class="footer">
-      alexandre gendron
+     Tout droits réservés à Alexandre Gendron Portfolio 2025
     </h3>
   </footer>
 
