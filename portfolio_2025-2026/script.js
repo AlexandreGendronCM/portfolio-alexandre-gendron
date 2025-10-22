@@ -17,16 +17,16 @@ gsap.fromTo("#bande_competences", { x: 0 }, { x: -(bandeCompetencesTxtWidth * 2)
 
 gsap.registerPlugin(ScrollTrigger) 
 
-gsap.to("body", {
-  y: "5%",
-  ease: "none", 
-  scrollTrigger: {
-    trigger: ".container_apropos_contact", 
-    start: "top 40%", 
-    end: "bottom bottom", 
-    markers: true
-  }
-});
+// gsap.to("body", {
+//   y: "5%",
+//   ease: "none", 
+//   scrollTrigger: {
+//     trigger: ".container_apropos_contact", 
+//     start: "top 40%", 
+//     end: "bottom bottom", 
+//     markers: true
+//   }
+// });
 
 
 let competence_1 = document.getElementById("competence_1")
@@ -68,16 +68,20 @@ fetch("./projets.json")
     console.log(this.tableau_projets)
     
   });
-        
-
-
-
+     
 
     },
     methods: {
         // ...
+
+        openProject(lien){
+          window.open(lien);
+        }
+
     }
 });
+
+
 
 
 
