@@ -1,25 +1,26 @@
-:root{
-    --rose:#B783A9;
-    --fond:#1E1E1E;
-    --blanc:#FFFFFF;
+:root {
+    --rose: #B783A9;
+    --fond: #1E1E1E;
+    --blanc: #FFFFFF;
     --vert: #A7FF65;
 }
 
 
 
 
-html{
+html {
 
-overflow-x: hidden;
+    overflow-x: hidden;
 
 }
+
 body {
     font-family: "Instrument Serif";
     background-color: var(--fond);
-    overflow-x: hidden ;
+    overflow-x: hidden;
 }
 
-a{
+a {
     text-decoration: none;
     color: var(--blanc);
 }
@@ -27,7 +28,17 @@ a{
 .header {
     display: grid;
     grid-template-columns: 0.3fr 1fr 1fr;
-    padding: 0 12px 0 12px;
+    padding: 0 1.2vw 0 1.2vw;
+}
+
+.lightmode {
+
+    justify-self: flex-end;
+    align-self: center;
+    height: 15%;
+    width: 33%;
+
+
 }
 
 .titre_header {
@@ -35,24 +46,24 @@ a{
     align-self: end;
     transform: translateY(10px);
     color: var(--blanc);
-    font-size: 5rem;
+    font-size: clamp(3vw, 5vw, 5rem);
     text-decoration: none;
     cursor: default;
 }
 
-a:hover{
+a:hover {
 
- color: var(--blanc);
+    color: var(--blanc);
 
 }
 
 .nom_header {
     justify-self: start;
     align-self: end;
-    color:var(--rose);
+    color: var(--rose);
     font-family: "Archivo";
-    letter-spacing: -0.15rem;
-    font-size: 2rem;
+    letter-spacing: -0.15vw;
+     font-size: clamp(2vw, 2vw, 5rem);
 }
 
 .annee_header {
@@ -60,8 +71,8 @@ a:hover{
     align-self: end;
     color: var(--rose);
     font-family: "Archivo";
-    letter-spacing: -0.15rem;
-    font-size: 2rem;
+    letter-spacing: -0.15vw;
+    font-size: clamp(2vw, 2vw, 5rem);
 }
 
 .hero {
@@ -71,19 +82,19 @@ a:hover{
     background-size: cover;
 }
 
-.bande{
-    margin: 10rem 0 10rem 0;
+.bande {
+    margin: 12vh 0 12vh 0;
     font-size: 5rem;
     color: var(--blanc);
 }
 
-.conainer_bande{
+.conainer_bande {
     display: flex;
     align-items: center;
     width: 100%;
 }
 
-.bande_wrapper{
+.bande_wrapper {
     display: flex;
 }
 
@@ -91,13 +102,13 @@ a:hover{
 .container_projet {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 10rem 1fr;
+    grid-template-rows: 10vw 1fr;
     height: 85vh;
 }
 
 .container_image_projet {
     grid-row: span 2;
- overflow: hidden;
+    overflow: hidden;
 }
 
 .image-projet-test {
@@ -106,10 +117,10 @@ a:hover{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    
+
 }
 
-.container_titre_projet{
+.container_titre_projet {
 
     border-top: var(--rose) solid 1px;
     justify-self: center;
@@ -120,21 +131,22 @@ a:hover{
     height: 100%;
 
 }
+
 .titre_projet {
-    font-size: 5rem;
+    font-size: clamp(2rem, 5vw, 5rem);
     color: var(--blanc);
     justify-self: center;
-    
+
 }
 
-.container_texte_projet{
+.container_texte_projet {
 
     border-bottom: var(--rose) solid 1px;
     text-align: center;
     justify-self: center;
     align-self: center;
     align-content: center;
-    padding: 1rem;
+    padding: 1vw;
     width: 100%;
     height: 100%;
 }
@@ -143,140 +155,143 @@ a:hover{
     padding: 12px;
     font-family: "Archivo";
     color: var(--rose);
-    font-size: 1.5rem;
+     font-size: clamp(3vw, 3vw, 5rem);
     align-self: center;
 }
 
-.bouton{
+.bouton {
     width: 50%;
     height: 10%;
     background-color: var(--fond);
     color: var(--vert);
     border: solid 1px var(--vert);
     border-radius: 5px;
-    font-size: 1.5rem;
+    font-size: 1.5vw;
 
 }
 
-.container_apropos_contact{
+.container_apropos_contact {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 10rem 1fr;
+    grid-template-rows: 10vw 1fr;
     height: 50vh;
 }
 
-.titre_contact{
-    font-size: 5rem;
+.titre_contact {
+    font-size: 5vw;
     color: var(--blanc);
     justify-self: center;
 }
 
-.titre_apropos{
-    font-size: 5rem;
+.titre_apropos {
+    font-size: 5vw;
     color: var(--blanc);
     justify-self: center;
 }
 
-.texte_contact{
+.texte_contact {
     padding: 12px;
     font-family: "Archivo";
     color: var(--rose);
-    font-size: 1.5rem;
+    font-size: clamp(12px, 1.5vw, 1.5vw);
     align-self: center;
     text-align: center;
     list-style: none;
-    
+
 }
 
-.texte_apropos{
+.texte_apropos {
     padding: 24px;
     font-family: "Archivo";
     color: var(--rose);
-    font-size: 1.5rem;
+    font-size: clamp(12px, 1.5vw, 1.5vw);
     align-self: center;
     text-align: center;
 }
 
-.mot_highlight{
+.mot_highlight {
 
     display: inline;
     font-family: "Instrument Serif";
     color: var(--vert);
-    letter-spacing: 0.05rem;
+    letter-spacing: 0.05vw;
 }
 
 
-.container_competence{
-justify-content: start;
-border-top: var(--rose) solid 1px;
-border-bottom: var(--rose) solid 1px;
+.container_competence {
+    justify-content: start;
+    border-top: var(--rose) solid 1px;
+    border-bottom: var(--rose) solid 1px;
 
 
 }
 
-.competence{
+.competence {
 
     font-size: 5rem;
-    color:var(--rose);
+    color: var(--rose);
 }
 
-.footer{
+.footer {
     font-family: "Archivo";
-    font-size: 1rem;
-    color:var(--rose);
+    font-size: 1vw;
+    color: var(--rose);
     text-align: center;
     padding-top: 7rem;
 }
 
-.affAlt > .container_titre_projet{
-order: 1;
+.affAlt>.container_titre_projet {
+    order: 1;
 }
 
-.affAlt > .container_image_projet{
-order: 0;
+.affAlt>.container_image_projet {
+    order: 0;
 }
 
-.affAlt > .container_texte_projet{
-order: 2;
+.affAlt>.container_texte_projet {
+    order: 2;
 }
 
 
 @media screen and (max-width: 1000px) {
-  
-.container_projet {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 10rem 10rem 1fr;
-    height: 60vh;
-}
-
-.affAlt > .container_titre_projet{
-order: 0;
-}
-
-.affAlt > .container_image_projet{
-order: 1;
-}
-
-.affAlt > .container_texte_projet{
-order: 2;
-}
 
 
-    
-.container_apropos_contact{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 10rem 1fr 10rem 1fr;
-    height: 100vh;
-}
 
-.container_apropos_contact > .titre_contact{
-    order: 1;
-}
 
-.container_apropos_contact > .texte_contact{
-    order: 2;
-}
+    .container_projet {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 10rem 10rem 1fr;
+        height: 60vh;
+    }
+
+    .affAlt>.container_titre_projet {
+        order: 0;
+    }
+
+    .affAlt>.container_image_projet {
+        order: 1;
+    }
+
+    .affAlt>.container_texte_projet {
+        order: 2;
+    }
+
+
+
+    .container_apropos_contact {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 10vw 1fr 10vw 1fr;
+        height: 100vh;
+    }
+
+    .container_apropos_contact>.titre_contact {
+        order: 1;
+    }
+
+    .container_apropos_contact>.texte_contact {
+        order: 2;
+    }
 
 }

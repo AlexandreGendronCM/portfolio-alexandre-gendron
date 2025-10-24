@@ -29,11 +29,10 @@ gsap.registerPlugin(ScrollTrigger)
 // });
 
 
-let competence_1 = document.getElementById("competence_1")
-let competence_1_txt = document.getElementById("competence_1_txt")
+// let competence_1 = document.getElementById("competence_1")
+// let competence_1_txt = document.getElementById("competence_1_txt")
 
 let competences = document.querySelectorAll(".container_competence");
-
 competences.forEach(function (competence,index){
 
 const animation = gsap
@@ -83,10 +82,16 @@ fetch("./projets.json")
 
 
 
-
-
-
 const vm = appli.mount('#section_projets');
+
+
+
+
+let lightmode
+
+
+
+
 
 
 
