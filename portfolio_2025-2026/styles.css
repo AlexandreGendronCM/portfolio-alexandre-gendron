@@ -84,7 +84,7 @@ a:hover {
 
 .bande {
     margin: 12vh 0 12vh 0;
-    font-size: 5rem;
+    font-size: 4rem;
     color: var(--blanc);
 }
 
@@ -155,7 +155,7 @@ a:hover {
     padding: 12px;
     font-family: "Archivo";
     color: var(--rose);
-     font-size: clamp(3vw, 3vw, 5rem);
+    font-size: clamp(0.7rem, 2vw, 2vw);
     align-self: center;
 }
 
@@ -166,7 +166,7 @@ a:hover {
     color: var(--vert);
     border: solid 1px var(--vert);
     border-radius: 5px;
-    font-size: 1.5vw;
+    font-size: clamp(0.7rem, 2vw, 2vw);
 
 }
 
@@ -253,7 +253,7 @@ a:hover {
 }
 
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 800px) {
 
 
 
@@ -261,8 +261,13 @@ a:hover {
     .container_projet {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 10rem 10rem 1fr;
+        grid-template-rows: 10vw 20vw 1fr;
         height: 60vh;
+    }
+
+    .bouton{
+
+        height: 20%;
     }
 
     .affAlt>.container_titre_projet {
