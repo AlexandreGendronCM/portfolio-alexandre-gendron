@@ -46,7 +46,7 @@ a {
     align-self: end;
     transform: translateY(10px);
     color: var(--blanc);
-    font-size: clamp(3vw, 5vw, 5rem);
+    font-size: clamp(2rem, 5vw, 5rem);
     text-decoration: none;
     cursor: default;
 }
@@ -63,7 +63,7 @@ a:hover {
     color: var(--rose);
     font-family: "Archivo";
     letter-spacing: -0.15vw;
-     font-size: clamp(2vw, 2vw, 5rem);
+    font-size: clamp(0.7rem, 2vw, 5rem);
 }
 
 .annee_header {
@@ -72,7 +72,7 @@ a:hover {
     color: var(--rose);
     font-family: "Archivo";
     letter-spacing: -0.15vw;
-    font-size: clamp(2vw, 2vw, 5rem);
+    font-size: clamp(0.7rem, 2vw, 5rem);
 }
 
 .hero {
@@ -155,7 +155,7 @@ a:hover {
     padding: 12px;
     font-family: "Archivo";
     color: var(--rose);
-    font-size: clamp(0.7rem, 2vw, 2vw);
+    font-size: clamp(16px, 1.5vw, 1.5vw);
     align-self: center;
 }
 
@@ -166,7 +166,7 @@ a:hover {
     color: var(--vert);
     border: solid 1px var(--vert);
     border-radius: 5px;
-    font-size: clamp(0.7rem, 2vw, 2vw);
+    font-size: clamp(16px, 1.5vw, 1.5vw);
 
 }
 
@@ -193,7 +193,7 @@ a:hover {
     padding: 12px;
     font-family: "Archivo";
     color: var(--rose);
-    font-size: clamp(12px, 1.5vw, 1.5vw);
+    font-size: clamp(16px, 1.5vw, 1.5vw);
     align-self: center;
     text-align: center;
     list-style: none;
@@ -204,13 +204,12 @@ a:hover {
     padding: 24px;
     font-family: "Archivo";
     color: var(--rose);
-    font-size: clamp(12px, 1.5vw, 1.5vw);
+    font-size: clamp(16px, 1.5vw, 1.5vw);
     align-self: center;
     text-align: center;
 }
 
 .mot_highlight {
-
     display: inline;
     font-family: "Instrument Serif";
     color: var(--vert);
@@ -222,19 +221,16 @@ a:hover {
     justify-content: start;
     border-top: var(--rose) solid 1px;
     border-bottom: var(--rose) solid 1px;
-
-
 }
 
 .competence {
-
     font-size: 5rem;
     color: var(--rose);
 }
 
 .footer {
     font-family: "Archivo";
-    font-size: 1vw;
+    font-size: clamp(0.7rem, 1vw, 1vw);
     color: var(--rose);
     text-align: center;
     padding-top: 7rem;
@@ -256,7 +252,9 @@ a:hover {
 @media screen and (max-width: 800px) {
 
 
-
+    .competence {
+        font-size: 2rem;
+    }
 
     .container_projet {
         display: grid;
@@ -265,9 +263,9 @@ a:hover {
         height: 60vh;
     }
 
-    .bouton{
-
-        height: 20%;
+    .bouton {
+        height: 1.7rem;
+        margin-bottom: 0.5rem;
     }
 
     .affAlt>.container_titre_projet {

@@ -17,20 +17,7 @@ gsap.fromTo("#bande_competences", { x: 0 }, { x: -(bandeCompetencesTxtWidth * 2)
 
 gsap.registerPlugin(ScrollTrigger) 
 
-// gsap.to("body", {
-//   y: "5%",
-//   ease: "none", 
-//   scrollTrigger: {
-//     trigger: ".container_apropos_contact", 
-//     start: "top 40%", 
-//     end: "bottom bottom", 
-//     markers: true
-//   }
-// });
 
-
-// let competence_1 = document.getElementById("competence_1")
-// let competence_1_txt = document.getElementById("competence_1_txt")
 
 let competences = document.querySelectorAll(".container_competence");
 competences.forEach(function (competence,index){
@@ -74,7 +61,7 @@ fetch("./projets.json")
         // ...
 
         openProject(lien){
-          window.open(lien);
+          window.location.href = lien;
         }
 
     }
