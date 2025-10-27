@@ -62,7 +62,7 @@
 
 
 
-      <div class="container_projet"  :class="{affAlt : projet.id % 2 == 0}">
+      <div class="container_projet"  :class="{affAlt : projet.id % 2 == 0},{borderTop : projet.titre == Métrage}">
 
 <div class="container_titre_projet">
           <h2 class="titre_projet" id="titre_1">{{projet.title}}</h2>

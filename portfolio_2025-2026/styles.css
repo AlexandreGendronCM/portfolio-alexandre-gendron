@@ -77,7 +77,7 @@ a:hover {
 
 .hero {
     height: 100vh;
-    background-image: url(../medias/img/Frame\ 17.png);
+    background-image: url(../medias/img/montagne2.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -100,15 +100,28 @@ a:hover {
 
 
 .container_projet {
+    border-bottom: var(--rose) solid 1px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 10vw 1fr;
-    height: 85vh;
+    height: 75vh;
+}
+
+.container_projet_double {
+    border-bottom: var(--rose) solid 1px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 10vw 1fr;
+    height: 75vh;
 }
 
 .container_image_projet {
     grid-row: span 2;
     overflow: hidden;
+    /* max-width: 80%;
+    aspect-ratio: 16/9; */
+    /* justify-self: center;
+    align-self: center; */
 }
 
 .image-projet-test {
@@ -122,7 +135,7 @@ a:hover {
 
 .container_titre_projet {
 
-    border-top: var(--rose) solid 1px;
+    /* border-top: var(--rose) solid 1px; */
     justify-self: center;
     align-self: center;
     align-content: center;
@@ -141,7 +154,7 @@ a:hover {
 
 .container_texte_projet {
 
-    border-bottom: var(--rose) solid 1px;
+    /* border-bottom: var(--rose) solid 1px; */
     text-align: center;
     justify-self: center;
     align-self: center;
@@ -175,6 +188,7 @@ a:hover {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 10vw 1fr;
     height: 50vh;
+    margin-top: 10vw;
 }
 
 .titre_contact {
@@ -236,6 +250,10 @@ a:hover {
     padding-top: 7rem;
 }
 
+.borderTop{
+    border-top: var(--rose) solid 1px;
+}
+
 .affAlt>.container_titre_projet {
     order: 1;
 }
@@ -262,6 +280,13 @@ a:hover {
         grid-template-rows: 10vw 20vw 1fr;
         height: 60vh;
     }
+
+    .container_projet_double {
+    display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 10vw 20vw 10vw 20vw;
+        height: 60vh;
+}
 
     .bouton {
         height: 1.7rem;
