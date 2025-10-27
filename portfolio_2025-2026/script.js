@@ -54,6 +54,9 @@ fetch("./projets.json")
     console.log(this.tableau_projets)
     
   });
+
+
+  
      
 
     },

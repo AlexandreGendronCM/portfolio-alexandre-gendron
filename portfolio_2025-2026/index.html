@@ -60,7 +60,7 @@
 
     <div v-for="projet in tableau_projets">
 
-
+   
 
       <div class="container_projet"  :class="{affAlt : projet.id % 2 == 0},{borderTop : projet.titre == Métrage}">
 
@@ -77,7 +77,12 @@
 
         <div class="container_texte_projet">
           <p class="texte_projet">{{projet.sneakpeek}} </p>
-          <button class="bouton" @click="openProject(projet.lien)">Voir le projet</button>
+         <a :href="projet.lien" class="bouton">Voir le projet</a>
+
+
+
+
+       
         </div>
 
       </div>
