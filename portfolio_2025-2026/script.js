@@ -1,3 +1,8 @@
+gsap.registerPlugin(ScrollTrigger)
+
+
+
+
 let bandeProjetTxtWidth = document.getElementById("bande_projet").getBoundingClientRect().width;
 console.log(bandeProjetTxtWidth * 2);
 
@@ -9,6 +14,19 @@ gsap.fromTo("#bande_projet", {
   ease: "none",
   repeat: -1
 });
+
+gsap.from("#section_projets", {
+  opacity: 0,
+  duration: 1,
+  scrollTrigger: {
+      trigger: "#section_projets",
+      start: "top 80%",
+      end: "bottom 60%",
+      toggleActions: "play none none reverse",
+  }
+});
+
+
 
 let bandeAproposContactTxtWidth = document.getElementById("bande_apropos_contact").getBoundingClientRect().width;
 console.log(bandeAproposContactTxtWidth * 2);
@@ -33,34 +51,6 @@ gsap.fromTo("#bande_competences", {
   ease: "none",
   repeat: -1
 });
-
-
-
-gsap.registerPlugin(ScrollTrigger)
-
-
-
-let competences = document.querySelectorAll(".container_competence");
-competences.forEach(function (competence, index) {
-
-  const animation = gsap
-    .timeline({
-      paused: true
-    })
-    .to(competence.querySelector(".competence"), {
-      color: "#1E1E1E"
-    })
-    .to(competence, {
-      backgroundColor: "#B783A9"
-    }, 0);
-
-  competence.addEventListener("mouseenter", () => animation.play());
-  competence.addEventListener("mouseleave", () => animation.reverse());
-
-})
-
-
-
 
 
 const appli = Vue.createApp({

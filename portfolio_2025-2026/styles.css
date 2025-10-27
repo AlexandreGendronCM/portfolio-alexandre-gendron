@@ -173,13 +173,14 @@ a:hover {
 }
 
 .bouton {
-    width: 50%;
-    height: 10%;
+    width: 15vw;
+    height: 7vh;
     background-color: var(--fond);
     color: var(--vert);
     border: solid 1px var(--vert);
     border-radius: 5px;
     font-size: clamp(16px, 1.5vw, 1.5vw);
+    margin: 2vh;
 
 }
 
@@ -188,17 +189,16 @@ a:hover {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 10vw 1fr;
     height: 50vh;
-    margin-top: 10vw;
 }
 
 .titre_contact {
-    font-size: 5vw;
+    font-size: clamp(2rem, 5vw, 5rem);
     color: var(--blanc);
     justify-self: center;
 }
 
 .titre_apropos {
-    font-size: 5vw;
+    font-size: clamp(2rem, 5vw, 5rem);
     color: var(--blanc);
     justify-self: center;
 }
@@ -269,7 +269,7 @@ a:hover {
 
 @media screen and (max-width: 800px) {
 
-
+.hero{}
     .competence {
         font-size: 2rem;
     }
