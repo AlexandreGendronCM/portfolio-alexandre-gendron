@@ -2,20 +2,23 @@
   {
     "id": 1,
     "title": "Métrage",
-    "category": "Web",
+    "category": "Web / Équipe",
     "sneakpeek": "Métrage est un site de critiques consacré à la cinématographie sous toutes ses formes : films, séries et courts métrages. Il a été créé par trois amis passionnés : Rafael Angon Dubé, Mikael Arseneau et Alexandre Gendron.",
     "images":  "../medias/img/metrage.png",
-    "lien": "projet.html?proj-id=1"
-
+    "lien": "projet.html?proj-id=1",
+    "description": "Métrage est un site de critiques consacré à la cinématographie sous toutes ses formes : films, séries et courts métrages. Il a été créé par trois amis passionnés : Rafael Angon Dubé, Mikael Arseneau et Alexandre Gendron. Le site propose des critiques détaillées, des analyses approfondies et des recommandations personnalisées pour aider les visiteurs à découvrir de nouvelles œuvres cinématographiques. Avec une interface conviviale et un contenu riche, Métrage vise à devenir une référence incontournable pour les amateurs de cinéma et de séries.",
+    "roles": ["Alexandre Gendron : Développeur web et designer", "Rafael Angon Dubé : Rédacteur en chef et critique principal", "Mikael Arseneau : Responsable du contenu et analyste"]
     
   },
   {
     "id": 2,
-    "title": "Fhyre Records",
+    "title": "Fhyre_Records",
     "category": "Web",
     "sneakpeek": "Fhyre Records est un site web vitrine dédié à la musique. Ce site, avait pour but de développer nos compétences avec les animations css",
     "images":  "../medias/img/Frame 41.png",
-    "lien": "projet.html?proj-id=2"
+    "lien": "projet.html?proj-id=2",
+    "description": "Fhyre Records est un site web vitrine dédié à la musique. Ce site, avait pour but de développer nos compétences avec les animations css. Le site présente les artistes signés chez Fhyre Records, leurs albums, et propose des extraits musicaux à écouter en ligne. Avec une interface moderne et dynamique, le site vise à offrir une expérience immersive aux visiteurs tout en mettant en avant la diversité musicale de la maison de disques.",
+    "roles": ["Alexandre Gendron : Développeur web et designer"]
   
   },
   {
@@ -29,7 +32,7 @@
   },
   {
     "id": 4,
-    "title": "Chasseur de crânes",
+    "title": "Chasseur_de_crânes",
     "category": "Unity",
     "sneakpeek": "Projet de unity jeux vr wow trop fort :) ",
     "images":  "../medias/img/Frame 41.png",
@@ -38,7 +41,7 @@
   },
   {
     "id": 5,
-    "title": "The Nameless",
+    "title": "The_Nameless",
     "category": "Phaser",
     "sneakpeek": "Jeu en 2d fait sur phaser inspiré des SoulsLike ",
     "images":  "../medias/img/Frame 41.png",

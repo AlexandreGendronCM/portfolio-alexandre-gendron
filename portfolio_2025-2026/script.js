@@ -1,21 +1,40 @@
-let bandeProjetTxtWidth = document.getElementById("bande_projet").getBoundingClientRect().width;
-console.log(bandeProjetTxtWidth * 2);
-
-gsap.fromTo("#bande_projet", { x: 0 }, { x: -(bandeProjetTxtWidth * 2), duration: ((bandeProjetTxtWidth * 2) / 143), ease: "none", repeat: -1 });
-
-let bandeAproposContactTxtWidth = document.getElementById("bande_apropos_contact").getBoundingClientRect().width;
-console.log(bandeAproposContactTxtWidth * 2);
-
-gsap.fromTo("#bande_apropos_contact", { x: 0 }, { x: -(bandeAproposContactTxtWidth * 2), duration: ((bandeAproposContactTxtWidth * 2) / 143), ease: "none", repeat: -1 });
-
-let bandeCompetencesTxtWidth = document.getElementById("bande_competences").getBoundingClientRect().width;
-console.log(bandeCompetencesTxtWidth * 2);
-
-gsap.fromTo("#bande_competences", { x: 0 }, { x: -(bandeCompetencesTxtWidth * 2), duration: ((bandeCompetencesTxtWidth * 2) / 143), ease: "none", repeat: -1 });
-
-
-
 gsap.registerPlugin(ScrollTrigger) 
+
+
+// Animation des bandes projets après l'injection HTML
+document.querySelectorAll('.bande_projet').forEach(bande => {
+  const width = bande.getBoundingClientRect().width;
+  gsap.fromTo(bande, 
+    { x: 0 }, 
+    { x: -width*2, duration: (width*2)/143, ease: "none", repeat: -1 }
+  );
+});
+
+// Exemple pour bande_apropos_contact et bande_competences
+document.querySelectorAll('.bande_apropos_contact').forEach(bande => {
+  const width = bande.getBoundingClientRect().width;
+  gsap.fromTo(bande, { x: 0 }, { x: -width*2, duration: (width*2)/143, ease: "none", repeat: -1 });
+});
+
+document.querySelectorAll('.bande_competences').forEach(bande => {
+  const width = bande.getBoundingClientRect().width;
+  gsap.fromTo(bande, { x: 0 }, { x: -width*2, duration: (width*2)/143, ease: "none", repeat: -1 });
+});
+
+
+
+gsap.from("#section_projets", {
+        opacity: 0,
+        duration: 1,
+        scrollTrigger: {
+            trigger: "#section_projets",
+            start: "top 80%",
+            end: "bottom 60%",
+            toggleActions: "play none none reverse",
+        }
+    });
+
+
 
 
 
@@ -61,11 +80,11 @@ fetch("./projets.json")
 
     },
     methods: {
-        // ...
+      
 
-        openProject(lien){
-          window.location.href = lien;
-        }
+        // openProject(lien){
+        //   window.location.href = lien;
+        // }
 
     }
 });
@@ -74,19 +93,6 @@ fetch("./projets.json")
 
 const vm = appli.mount('#section_projets');
 
-
-
-
-let lightmode
-
-
-
-
-
-
-
-
-console.log(this.tableau_projets);
 
 
 

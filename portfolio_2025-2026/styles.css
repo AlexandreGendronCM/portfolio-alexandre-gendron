@@ -174,11 +174,10 @@ a:hover {
 
 .bouton {
     width: 50%;
-    height: 10%;
+    height: 15%;
     background-color: var(--fond);
     color: var(--vert);
-    border: solid 1px var(--vert);
-    border-radius: 5px;
+   
     font-size: clamp(16px, 1.5vw, 1.5vw);
 
 }
@@ -188,7 +187,7 @@ a:hover {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 10vw 1fr;
     height: 50vh;
-    margin-top: 10vw;
+   
 }
 
 .titre_contact {
@@ -253,6 +252,17 @@ a:hover {
 .borderTop{
     border-top: var(--rose) solid 1px;
 }
+
+
+.container_section_projet{
+display: grid;
+padding: 24px;
+height: 100%;
+border-bottom: var(--rose) solid 1px;
+justify-content: center;
+
+}
+
 
 .affAlt>.container_titre_projet {
     order: 1;
