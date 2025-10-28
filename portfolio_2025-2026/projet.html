@@ -11,10 +11,48 @@
   </style>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
-
-  
-
   <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    /* === Styles du carrousel === */
+    .carousel {
+      position: relative;
+      width: 100%;
+      max-width: 800px;
+      height:  50vh;
+      margin: 2rem auto;
+      overflow: hidden;
+    }
+
+    .carousel img {
+      width: 100%;
+      height: auto;
+      height:  50vh;
+      display: block;
+      transition: opacity 0.5s ease;
+    }
+
+    .carousel-controls {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 0.5rem;
+    }
+
+    .carousel-controls button {
+      background: none;
+      border: 1px solid #aaa;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .carousel-controls button.active {
+      background: #111;
+    }
+  </style>
 </head>
 <body>
 
@@ -26,8 +64,54 @@
     </header>
   </section>
 
-  <main id="projet-container">
-    <!-- Le contenu du projet sera injecté ici -->
+  <main id="app">
+    <div id="projet-container" v-if="projet">
+      <div class="projet-detail">
+        <h1 class="titre_projet">{{ projet.title }}</h1>
+
+        <section class="container_bande">
+          <div class="bande_wrapper">
+            <h2 class="bande bande_projet" v-for="n in 12" :key="n">*{{ projet.title }}</h2>
+          </div>
+        </section>
+
+        <!-- Carrousel Vue -->
+        <div class="carousel">
+          <img :src="projet.images[currentIndex]" :alt="projet.title">
+        </div>
+
+        <div class="carousel-controls">
+          <button 
+            v-for="(img, index) in projet.images" 
+            :key="index"
+            :class="{active: index === currentIndex}"
+            @click="currentIndex = index">
+          </button>
+        </div>
+
+        <div class="container_section_projet">
+          <h2 class="titre_projet">Description</h2>
+          <p class="texte_projet">{{ projet.description }}</p>
+        </div>
+
+        <div class="container_section_projet">
+          <p><span class="titre_projet">Catégorie :</span> <span class="texte_projet">{{ projet.category }}</span></p>
+        </div>
+
+        <div class="container_section_projet">
+          <h2 class="titre_projet">Rôles</h2>
+          <ul>
+            <li v-for="(role, index) in projet.roles" :key="index" class="texte_projet">{{ role }}</li>
+          </ul>
+        </div>
+
+        <a href="index.html" class="btn-retour">← Retour</a>
+      </div>
+    </div>
+
+    <div v-else>
+      <h2>Chargement...</h2>
+    </div>
   </main>
 
   <footer>
@@ -35,80 +119,52 @@
   </footer>
 
   <!-- Librairies -->
+  <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
 
   <script>
-    const params = new URLSearchParams(window.location.search);
-    const projetId = parseInt(params.get('proj-id'));
+  const { createApp } = Vue;
 
-    fetch('projets.json')
-      .then(res => res.json())
-      .then(data => {
-        const projet = data.find(p => p.id === projetId);
+  createApp({
+    data() {
+      return {
+        projet: null,
+        currentIndex: 0,
+      };
+    },
+    mounted() {
+      const params = new URLSearchParams(window.location.search);
+      const projetId = parseInt(params.get('proj-id'));
 
-        if (!projet) {
-          document.getElementById('projet-container').innerHTML = `
-            <h2>Projet introuvable</h2>
-            <a href="index.html" class="btn-retour">Retour</a>
-          `;
-          return;
-        }
+      fetch('projets.json')
+        .then(res => res.json())
+        .then(data => {
+          const projet = data.find(p => p.id === projetId);
+          if (projet) {
+            this.projet = projet;
 
-        // Mettre le HTML sur la page
-        document.getElementById('projet-container').innerHTML = `
-          <div class="projet-detail">
-            <h1 class="titre_projet">${projet.title}</h1>
-
-            <section class="container_bande">
-              <div class="bande_wrapper">
-                ${Array(12).fill(`<h2 class="bande bande_projet">*${projet.title}</h2>`).join('')}
-              </div>
-            </section>
-
-            <img src="${projet.images}" alt="${projet.title}" class="img-projet">
-            <div>
-
-                     <div class="container_section_projet">
-                     <h2 class="titre_projet">Description</h2>
-                     <p class="texte_projet">${projet.description}</p>
-                     </div>
-              
-
-                     <div class="container_section_projet">
-                     <p><span class="titre_projet">Catégorie :</span> <span class="texte_projet">${projet.category}</span></p>
-                     </div>
-
-
-                     <div class="container_section_projet">
-                     <h2 class="titre_projet">Rôles</h2>
-                      <ul>
-                        ${projet.roles.map(role => `<li class="texte_projet">${role}</li>`).join('')}
-                     </div>
-
-
-
-              <a href="index.html" class="btn-retour">← Retour</a>
-            </div>
-          </div>
-        `;
-        //  Animation GSAP après fetch des infos
-        document.querySelectorAll('.bande_projet').forEach(bande => {
-          const width = bande.getBoundingClientRect().width;
-          gsap.fromTo(bande, 
-            { x: 0 }, 
-            { x: -width * 2, duration: (width * 2) / 143, ease: "none", repeat: -1 }
-          );
+            // Attendre un petit délai pour que les bandes existent
+            setTimeout(() => {
+              document.querySelectorAll('.bande_projet').forEach(bande => {
+                const width = bande.getBoundingClientRect().width;
+                gsap.fromTo(
+                  bande,
+                  { x: 0 },
+                  { x: -width * 2, duration: (width * 2) / 143, ease: "none", repeat: -1 }
+                );
+              });
+            }, 100);
+          }
         });
-      })
-      .catch(() => {
-        document.getElementById('projet-container').innerHTML = `
-          <h2>Erreur lors du chargement du projet</h2>
-          <a href="index.html" class="btn-retour">Retour</a>
-        `;
-      });
-  </script>
 
+      // Faire défiler automatiquement le carrousel
+      setInterval(() => {
+        if (this.projet) {
+          this.currentIndex = (this.currentIndex + 1) % this.projet.images.length;
+        }
+      }, 3000);
+    }
+  }).mount('#app');
+  </script>
 </body>
 </html>

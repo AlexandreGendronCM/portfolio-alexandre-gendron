@@ -277,6 +277,29 @@ justify-content: center;
 }
 
 
+#flecheG {
+    position: absolute;
+    top: 50%;
+    left: 2%;
+    font-size: 3rem;
+    color: var(--blanc);
+    cursor: pointer;
+    user-select: none;
+    z-index: 10;
+}
+
+#flecheD {
+    position: absolute;
+    top: 50%;
+    right: 2%;
+    font-size: 3rem;
+    color: var(--blanc);
+    cursor: pointer;
+    user-select: none;
+    z-index: 10;
+}
+
+
 @media screen and (max-width: 800px) {
 
 

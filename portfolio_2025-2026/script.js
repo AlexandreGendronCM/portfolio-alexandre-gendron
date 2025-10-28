@@ -1,6 +1,8 @@
 gsap.registerPlugin(ScrollTrigger) 
 
 
+
+
 // Animation des bandes projets après l'injection HTML
 document.querySelectorAll('.bande_projet').forEach(bande => {
   const width = bande.getBoundingClientRect().width;
@@ -82,17 +84,56 @@ fetch("./projets.json")
     methods: {
       
 
-        // openProject(lien){
-        //   window.location.href = lien;
-        // }
-
+        
     }
 });
 
-
+const applicarrousel = Vue.createApp({
+ 
+    data() {
+        return {
+            projetsArr: [],
+            selectedProject: [],
+            index: 0
+        };
+    },
+    mounted() {
+        console.log("L'app Vue a été créée et montée au DOM (mounted) !");
+ 
+        this.message = "Vue a été chargé et montée au DOM (mounted) !";
+ 
+        fetch("./projets.json")
+            .then(data => data.json())
+            .then(result => {
+                console.log(result);
+                this.projetsArr = result
+                this.selectedProject = this.projetsArr[0]
+                
+            });
+            this.selectedProject = this.projetsArr[this.index]
+    },
+    methods: {
+        changeSelectedProject(value) {
+            if (value == "back") {
+                this.index--
+            } else if (value == "next") {
+                this.index++
+            }
+ 
+            if (this.index > this.projetsArr.length - 1) {
+                this.index = 0
+            } else if (this.index <= -1) {
+                this.index = this.projetsArr.length - 1
+            }
+       
+            this.selectedProject = this.projetsArr[this.index]
+        }
+    }
+});
+ 
+const vmcaroussel = appli.mount('#projet-container');
 
 const vm = appli.mount('#section_projets');
-
 
 
 
