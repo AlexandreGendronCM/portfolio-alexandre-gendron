@@ -182,7 +182,7 @@ a:hover {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 10vw 1fr;
     height: 50vh;
-
+margin-bottom: 12vh;
 }
 
 .titre_contact {
