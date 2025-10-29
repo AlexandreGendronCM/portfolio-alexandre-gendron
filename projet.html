@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,52 +10,16 @@
     @import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap");
     @import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap");
   </style>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
   <link rel="stylesheet" href="styles.css" />
 
-  <style>
-    /* === Styles du carrousel === */
-    .carousel {
-      position: relative;
-      width: 100%;
-      max-width: 800px;
-      height:  50vh;
-      margin: 2rem auto;
-      overflow: hidden;
-    }
 
-    .carousel img {
-      width: 100%;
-      height: auto;
-      height:  50vh;
-      display: block;
-      transition: opacity 0.5s ease;
-    }
-
-    .carousel-controls {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      margin-top: 0.5rem;
-    }
-
-    .carousel-controls button {
-      background: none;
-      border: 1px solid #aaa;
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-
-    .carousel-controls button.active {
-      background: #111;
-    }
-  </style>
 </head>
+
 <body>
+
+  <!-- LANDING (la ou le site commence) -->
 
   <section class="landing">
     <header class="header">
@@ -64,10 +29,22 @@
     </header>
   </section>
 
+  <!-- MAIN VUE (l'app est 'mounté' ici)-->
+
   <main id="app">
+
+    <!-- APPARAIT SEULEMENT SI PROJET EXISTE -->
+
     <div id="projet-container" v-if="projet">
-      <div class="projet-detail">
+      <div>
+
+
+        <!-- TITRE DU PROJET -->
+
         <h1 class="titre_projet">{{ projet.title }}</h1>
+
+
+        <!-- BANDE DE TEXTE *PROJETS -->
 
         <section class="container_bande">
           <div class="bande_wrapper">
@@ -75,33 +52,56 @@
           </div>
         </section>
 
-        <!-- Carrousel Vue -->
+        <!-- CAROUSEL VUE -->
+
+        <!-- VIEN CHERCHER LES IMAGES -->
+
         <div class="carousel">
           <img :src="projet.images[currentIndex]" :alt="projet.title">
         </div>
 
+
+        <!-- CONTROLES DU CAROUSEL (fait un certain nombre de boutons selon le nombre d'images dans le JSON pour le projet sélectionné) -->
+
         <div class="carousel-controls">
-          <button 
-            v-for="(img, index) in projet.images" 
-            :key="index"
-            :class="{active: index === currentIndex}"
+          <button v-for="(img, index) in projet.images" :key="index" :class="{active: index === currentIndex}"
             @click="currentIndex = index">
           </button>
         </div>
+
+
+
+        <!-- DESCRIPTION DU PROJET -->
 
         <div class="container_section_projet">
           <h2 class="titre_projet">Description</h2>
           <p class="texte_projet">{{ projet.description }}</p>
         </div>
 
+
+        <!-- CATÉGORIE DU PROJET -->
+
+
         <div class="container_section_projet">
           <p><span class="titre_projet">Catégorie :</span> <span class="texte_projet">{{ projet.category }}</span></p>
         </div>
 
+
+        <!-- RÔLES, LOGICIELS, CONCEPTION, DÉVELOPPEMENT, OPTIMISATION -->
+
+
+        <!-- FAIT UNE LISTE  (avec les array donné dans le JSON) -->
         <div class="container_section_projet">
           <h2 class="titre_projet">Rôles</h2>
           <ul>
-            <li v-for="(role, index) in projet.roles" :key="index" class="texte_projet">{{ role }}</li>
+            <li v-for="(role, index) in projet.roles" :key="index" class="texte_contact">{{ role }}</li>
+          </ul>
+        </div>
+        <!-- FAIT UNE LISTE  (avec les array donné dans le JSON) -->
+        <div class="container_section_projet">
+          <h2 class="titre_projet">Logiciels Utilisés</h2>
+          <ul>
+            <li v-for="(logiciel, index) in projet.logiciels" :key="index" class="texte_contact">{{ logiciel }}</li>
           </ul>
         </div>
 
@@ -110,15 +110,32 @@
           <p class="texte_projet">{{ projet.conception }}</p>
         </div>
 
-        <a href="index.html" class="btn-retour">← Retour</a>
+        <div class="container_section_projet" v-show="projet.development">
+          <h2 class="titre_projet">Développement</h2>
+          <p class="texte_projet">{{ projet.development }}</p>
+        </div>
+
+        <div class="container_section_projet" v-show="projet.optimisation">
+          <h2 class="titre_projet">Optimisation</h2>
+          <p class="texte_projet">{{ projet.optimisation }}</p>
+        </div>
+
+
+        <!-- BOUTON RETOUR À L'ACCUEIL -->
+
+
+        <a href="index.html" class="bouton_retour">← Retour</a>
       </div>
     </div>
 
+
+    <!-- ÉTAT DE CHARGEMENT SI LE v-if FONCTIONNE PAS -->
     <div v-else>
       <h2>Chargement...</h2>
     </div>
   </main>
 
+  <!-- FOOTER -->
   <footer>
     <p class="footer">Tout droits réservés © Alexandre Gendron – Portfolio 2025</p>
   </footer>
@@ -127,49 +144,58 @@
   <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
 
+
+
+  <!-- APP VUE CRÉÉE POUR LE CAROUSEL -->
   <script>
-  const { createApp } = Vue;
+    const { createApp } = Vue;
 
-  createApp({
-    data() {
-      return {
-        projet: null,
-        currentIndex: 0,
-      };
-    },
-    mounted() {
-      const params = new URLSearchParams(window.location.search);
-      const projetId = parseInt(params.get('proj-id'));
+    createApp({
+      data() {
+        return {
+          projet: null,
+          currentIndex: 0,
+        };
+      },
+      mounted() {
+        const params = new URLSearchParams(window.location.search);
+        const projetId = parseInt(params.get('proj-id'));
 
-      fetch('projets.json')
-        .then(res => res.json())
-        .then(data => {
-          const projet = data.find(p => p.id === projetId);
-          if (projet) {
-            this.projet = projet;
+        fetch('projets.json')
+          .then(res => res.json())
+          .then(data => {
+            const projet = data.find(p => p.id === projetId);
+            if (projet) {
+              this.projet = projet;
 
-            // Attendre un petit délai pour que les bandes existent
-            setTimeout(() => {
-              document.querySelectorAll('.bande_projet').forEach(bande => {
-                const width = bande.getBoundingClientRect().width;
-                gsap.fromTo(
-                  bande,
-                  { x: 0 },
-                  { x: -width * 2, duration: (width * 2) / 143, ease: "none", repeat: -1 }
-                );
-              });
-            }, 100);
+              // ATTENDRE QUE LE DOM SOIT FAIT ET APRÈS FAIRE L'ANIMATION (pour être sûr que ça fonctionne)
+
+              setTimeout(() => {
+                document.querySelectorAll('.bande_projet').forEach(bande => {
+                  const width = bande.getBoundingClientRect().width;
+
+                  // ANIMATION GSAP POUR LA BANDE DE TEXTE *PROJETS* (même que pour les autres dans le index.html)
+
+                  gsap.fromTo(
+                    bande,
+                    { x: 0 },
+                    { x: -width * 2, duration: (width * 2) / 143, ease: "none", repeat: -1 }
+                  );
+                });
+              }, 100);
+            }
+          });
+
+        // FAIRE CHANGER LES IMAGES TOUT SEUL
+
+        setInterval(() => {
+          if (this.projet) {
+            this.currentIndex = (this.currentIndex + 1) % this.projet.images.length;
           }
-        });
-
-      // Faire défiler automatiquement le carrousel
-      setInterval(() => {
-        if (this.projet) {
-          this.currentIndex = (this.currentIndex + 1) % this.projet.images.length;
-        }
-      }, 3000);
-    }
-  }).mount('#app');
+        }, 3000);
+      }
+    }).mount('#app');
   </script>
 </body>
+
 </html>

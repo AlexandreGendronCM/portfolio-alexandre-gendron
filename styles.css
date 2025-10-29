@@ -1,3 +1,4 @@
+/* Root (j'ai mis les variables pour mes couleurs) */
 :root {
     --rose: #B783A9;
     --fond: #1E1E1E;
@@ -5,42 +6,40 @@
     --vert: #A7FF65;
 }
 
-
-
-
+/* cache le overflow du html (principalement pour les bandes défilantes) */
 html {
-
     overflow-x: hidden;
-
 }
 
+
+/* body on met la police de base couleur du fond et on cache le overflow */
 body {
     font-family: "Instrument Serif";
     background-color: var(--fond);
     overflow-x: hidden;
 }
 
+/* retirer les decorations de liens  + couleurs */
 a {
     text-decoration: none;
     color: var(--blanc);
 }
 
+
+/* hover en blanc sur les liens */
+a:hover {
+    color: var(--blanc);
+}
+
+
+/* css du header */
 .header {
     display: grid;
     grid-template-columns: 0.3fr 1fr 1fr;
     padding: 0 1.2vw 0 1.2vw;
 }
 
-.lightmode {
-
-    justify-self: flex-end;
-    align-self: center;
-    height: 15%;
-    width: 33%;
-
-
-}
-
+/* css pour les titres header */
 .titre_header {
     justify-self: start;
     align-self: end;
@@ -51,12 +50,10 @@ a {
     cursor: default;
 }
 
-a:hover {
 
-    color: var(--blanc);
 
-}
 
+/* css pour les noms headers change la couleur et la police */
 .nom_header {
     justify-self: start;
     align-self: end;
@@ -66,6 +63,7 @@ a:hover {
     font-size: clamp(0.7rem, 2vw, 5rem);
 }
 
+/* css pour l'annee_header change police et couleur */
 .annee_header {
     justify-self: end;
     align-self: end;
@@ -75,6 +73,7 @@ a:hover {
     font-size: clamp(0.7rem, 2vw, 5rem);
 }
 
+/* css pour la section hero */
 .hero {
     height: 100vh;
     background-image: url(./medias/img/montagne2.png);
@@ -82,6 +81,7 @@ a:hover {
     background-size: cover;
 }
 
+/* css pour les bandes de texte */
 .bande {
     margin: 12vh 0 12vh 0;
     font-size: 4rem;
@@ -98,7 +98,7 @@ a:hover {
     display: flex;
 }
 
-
+/* css pour les sections projets */
 .container_projet {
     border-bottom: var(--rose) solid 1px;
     display: grid;
@@ -115,16 +115,13 @@ a:hover {
     height: 75vh;
 }
 
+/* css pour les images projets */
 .container_image_projet {
     grid-row: span 2;
     overflow: hidden;
-    /* max-width: 80%;
-    aspect-ratio: 16/9; */
-    /* justify-self: center;
-    align-self: center; */
 }
 
-.image-projet-test {
+.image-projet {
     inset: 0;
     position: relative;
     width: 100%;
@@ -133,16 +130,14 @@ a:hover {
 
 }
 
+/* css pour les titres projets */
 .container_titre_projet {
-
-    /* border-top: var(--rose) solid 1px; */
     justify-self: center;
     align-self: center;
     align-content: center;
     text-align: center;
     width: 100%;
     height: 100%;
-
 }
 
 .titre_projet {
@@ -152,9 +147,8 @@ a:hover {
 
 }
 
+/* css pour les textes projets */
 .container_texte_projet {
-
-    /* border-bottom: var(--rose) solid 1px; */
     text-align: center;
     justify-self: center;
     align-self: center;
@@ -172,22 +166,23 @@ a:hover {
     align-self: center;
 }
 
+/* css pour les boutons */
 .bouton {
     width: 50%;
     height: 15%;
     background-color: var(--fond);
     color: var(--vert);
-   
     font-size: clamp(16px, 1.5vw, 1.5vw);
-
 }
 
+
+/* css pour la section a propos et contact */
 .container_apropos_contact {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 10vw 1fr;
     height: 50vh;
-   
+
 }
 
 .titre_contact {
@@ -222,6 +217,8 @@ a:hover {
     text-align: center;
 }
 
+
+/* css pour les mots en vert */
 .mot_highlight {
     display: inline;
     font-family: "Instrument Serif";
@@ -229,7 +226,7 @@ a:hover {
     letter-spacing: 0.05vw;
 }
 
-
+/* css pour la section competences */
 .container_competence {
     justify-content: start;
     border-top: var(--rose) solid 1px;
@@ -241,6 +238,7 @@ a:hover {
     color: var(--rose);
 }
 
+/* css pour le footer */
 .footer {
     font-family: "Archivo";
     font-size: clamp(0.7rem, 1vw, 1vw);
@@ -249,21 +247,34 @@ a:hover {
     padding-top: 7rem;
 }
 
-.borderTop{
+/* classe pour border top (classe qui vien se placer sur métrage pour qu'elle ait une bordure en haut) */
+.borderTop {
     border-top: var(--rose) solid 1px;
 }
 
+/* css pour le bouton retour */
+.bouton_retour {
+    display: flex;
+    margin-top: 2rem;
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--rose);
+    color: var(--rose);
+    font-size: clamp(16px, 1.5vw, 1.5vw);
+    transition: background-color 0.3s, color 0.3s;
+    justify-self: center;
+}
 
-.container_section_projet{
-display: grid;
-padding: 24px;
-height: 100%;
-border-bottom: var(--rose) solid 1px;
-justify-content: center;
+/* css pour les sections dans la page projet */
+.container_section_projet {
+    display: grid;
+    padding: 24px;
+    height: 100%;
+    border-bottom: var(--rose) solid 1px;
+    justify-content: center;
 
 }
 
-
+/* css pour les affichages alternatifs (image a droite ou a gauche) */
 .affAlt>.container_titre_projet {
     order: 1;
 }
@@ -277,29 +288,51 @@ justify-content: center;
 }
 
 
-#flecheG {
-    position: absolute;
-    top: 50%;
-    left: 2%;
-    font-size: 3rem;
-    color: var(--blanc);
-    cursor: pointer;
-    user-select: none;
-    z-index: 10;
+
+
+/* css pour le carousel d'images */
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    height: 50vh;
+    margin: 2rem auto;
+    overflow: hidden;
 }
 
-#flecheD {
-    position: absolute;
-    top: 50%;
-    right: 2%;
-    font-size: 3rem;
-    color: var(--blanc);
+.carousel img {
+    width: 100%;
+    height: auto;
+    height: 50vh;
+    display: block;
+    transition: opacity 0.5s ease;
+}
+
+.carousel-controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 0.5rem;
+}
+
+/* css pour les boutons du carousel */
+.carousel-controls button {
+    background: none;
+    border: 1px solid var(--rose);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
     cursor: pointer;
-    user-select: none;
-    z-index: 10;
+    transition: background 0.3s ease;
+}
+
+.carousel-controls button.active {
+    background: var(--vert);
 }
 
 
+
+/* media query pour les ecrans plus petits que 800px (RESPONSIVE) */
 @media screen and (max-width: 800px) {
 
 
@@ -315,11 +348,11 @@ justify-content: center;
     }
 
     .container_projet_double {
-    display: grid;
+        display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 10vw 20vw 10vw 20vw;
         height: 60vh;
-}
+    }
 
     .bouton {
         height: 1.7rem;
