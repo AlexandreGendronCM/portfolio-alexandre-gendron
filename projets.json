@@ -4,7 +4,7 @@
     "title": "Métrage",
     "category": "Web 4/ Équipe",
     "sneakpeek": "Métrage est un site de critiques consacré à la cinématographie sous toutes ses formes : films, séries et courts métrages. Il a été créé par trois amis passionnés : Rafael Angon Dubé, Mikael Arseneau et Alexandre Gendron.",
-    "images":  ["../medias/img/metrage.png", "../medias/img/metrage2.png", "../medias/img/metrage3.png", "../medias/img/metrage4.png"],
+    "images":  ["./medias/img/metrage.png", "./medias/img/metrage2.png", "./medias/img/metrage3.png", "./medias/img/metrage4.png"],
     "lien": "projet.html?proj-id=1",
     "description": "Métrage est un site de critiques consacré à la cinématographie sous toutes ses formes : films, séries et courts métrages. Il a été créé par trois amis passionnés : Rafael Angon Dubé, Mikael Arseneau et Alexandre Gendron. Le site propose des critiques détaillées, des analyses approfondies et des recommandations personnalisées pour aider les visiteurs à découvrir de nouvelles œuvres cinématographiques. Avec une interface conviviale et un contenu riche, Métrage vise à devenir une référence incontournable pour les amateurs de cinéma et de séries.",
     "roles": ["Alexandre Gendron : Développeur web et designer", "Rafael Angon Dubé : Rédacteur en chef et critique principal", "Mikael Arseneau : Développeur Principal"],
