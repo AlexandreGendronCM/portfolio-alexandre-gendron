@@ -15,7 +15,7 @@
     "title": "Fhyre_Records",
     "category": "Web 2 / Individuel",
     "sneakpeek": "Fhyre Records est un site web vitrine dédié à la musique. Ce site, avait pour but de développer nos compétences avec les animations css",
-    "images": ["../medias/img/metrage.png", "../medias/img/metrage2.png", "../medias/img/metrage3.png", "../medias/img/metrage4.png"],
+    "images": ["./medias/img/metrage.png", "./medias/img/metrage2.png", "./medias/img/metrage3.png", "./medias/img/metrage4.png"],
     "lien": "projet.html?proj-id=2",
     "description": "Fhyre Records est un site web vitrine dédié à la musique. Ce site, avait pour but de développer nos compétences avec les animations css. Le site présente les artistes signés chez Fhyre Records, leurs albums, et propose des extraits musicaux à écouter en ligne. Avec une interface moderne et dynamique, le site vise à offrir une expérience immersive aux visiteurs tout en mettant en avant la diversité musicale de la maison de disques.",
     "roles": ["Alexandre Gendron : Développeur web et designer"]
@@ -26,7 +26,7 @@
     "title": "Introspecrion",
     "category": "Traintement Audiovisuel / Individuel",
     "sneakpeek": "Ce projet avait pour but de réaliser un projet sonore interactif.",
-    "images": ["../medias/img/metrage.png", "../medias/img/metrage2.png", "../medias/img/metrage3.png", "../medias/img/metrage4.png"],
+    "images": ["./medias/img/metrage.png", "./medias/img/metrage2.png", "./medias/img/metrage3.png", "./medias/img/metrage4.png"],
     "lien": "projet.html?proj-id=3",
     "description": "Ce projet avait pour but de réaliser un projet sonore interactif. En utilisant des techniques de design sonore avancées, nous avons créé une expérience immersive où les utilisateurs peuvent interagir avec différents éléments sonores pour explorer des thèmes introspectifs. Le projet combine des enregistrements audio, des effets sonores et une interface utilisateur intuitive pour offrir une expérience unique qui encourage la réflexion personnelle et l'exploration intérieure.",
     "roles": ["Alexandre Gendron : Designer sonore et développeur interactif"]
@@ -37,7 +37,7 @@
     "title": "Chasseur_de_crânes",
     "category": "Réalité Mixte / Équipe",
     "sneakpeek": "Projet de unity jeux vr wow trop fort :) ",
-    "images":  ["../medias/img/metrage.png", "../medias/img/metrage2.png", "../medias/img/metrage3.png", "../medias/img/metrage4.png"],
+    "images":  ["./medias/img/metrage.png", "./medias/img/metrage2.png", "./medias/img/metrage3.png", "./medias/img/metrage4.png"],
     "lien": "projet.html?proj-id=4",
     "description": "Projet de unity jeux vr wow trop fort :) ",
     "roles": ["Alexandre Gendron : Modélisateur 3D et programmeur Unity","Mathieu Willet : Programmeur Unity et Testeur","Mikael Arseneau : Programmeur Unity principal"]
@@ -48,7 +48,7 @@
     "title": "The_Nameless",
     "category": "Intéractivité Ludique / Individuel",
     "sneakpeek": "Jeu en 2d fait sur phaser inspiré des SoulsLike ",
-    "images":  ["../medias/img/metrage.png", "../medias/img/metrage2.png", "../medias/img/metrage3.png", "../medias/img/metrage4.png"],
+    "images":  ["./medias/img/metrage.png", "./medias/img/metrage2.png", "./medias/img/metrage3.png", "./medias/img/metrage4.png"],
     "lien": "projet.html?proj-id=5",
     "description": "Jeu en 2d fait sur phaser inspiré des SoulsLike ",
     "roles": ["Alexandre Gendron : Développeur Phaser et designer de jeu"]
